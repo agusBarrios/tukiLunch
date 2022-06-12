@@ -1,0 +1,703 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box
+}
+
+
+
+
+
+
+/*grids por areas*/
+
+/* 2 columnas - 5 filas*/
+#gridsInicio{
+    display: grid;
+    grid-template-areas: 
+           "cabeza cabeza"
+           "barra barra"
+           "productos productos"
+           "promos brazo"
+           "pie pie"    
+    ;
+
+    grid-template-columns: 100%;
+    grid-template-rows: 10fr 1fr 3fr 3fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+}
+
+
+body{
+    width: 100%;
+    height: 350vh;
+    background-image: url(data:image/jpeg;base64,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);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    }
+
+.boxH1{
+    margin: 10px;
+    padding: 5px; 
+}
+.flexTitulo{
+    display: flex;
+
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whatA{
+    color: rgb(12, 230, 0);
+    width: 1300px;
+    height: 25px;
+    text-decoration: none;
+    font-family: preconnect;
+    font-size: 40px;
+}
+.flexWhat{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.menuFlex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.boxMenu{
+    margin: 0px 10px 0px 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: gray;
+}
+.spanDecoration{
+    color: white;
+    text-decoration: none;
+}
+
+
+.boxProductos{
+    margin: 20px;
+    padding: 10px;
+}
+.flexProductos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around
+}
+
+
+article{
+    margin: 20px;
+    padding: 5px;
+}
+
+
+.flexPromos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.boxPromos{
+    margin: 20px;
+    padding: 10px;
+    
+}
+.h1Promos{
+    color: rgb(255, 38, 0);
+    margin: 10px;
+    padding: 5px;    
+    border-top: 1px solid #000;;
+}
+.flexH1{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+footer{
+    background-color: rgb(62, 54, 48);
+}
+.boxFooter{
+   
+    border-left: 1px solid #000;
+    border-right: 1px solid black;
+}
+.flexFooter{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+
+
+ /*transformaciones*/
+
+ .navegador{
+    transition: width;
+
+}
+.navegador:hover{
+    width: 1px;
+    background-color: orangered;
+}
+
+
+
+
+
+ /*areas de grid*/
+
+#cabeza{
+    grid-area: cabeza;
+}
+
+#barra{
+    grid-area: barra;
+}
+
+#productos{
+    grid-area: productos;
+}
+
+#promos{
+    grid-area: promos;
+}
+
+#brazo{
+    grid-area: brazo;
+}
+
+#pie{
+    grid-area: pie;
+}
+
+
+
+
+                    /*media queris*/
+
+/*smartphone*/
+
+
+
+@media (max-width: 490px){
+    .smartBody{
+        height: 2500vh;
+    }
+
+
+
+
+#gridsInicio{
+    display: grid;
+    grid-template-areas: 
+       "cabeza"
+       "barra"
+       "productos"
+       "promos"
+       "brazo"
+       "pie"
+    ; 
+
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 4fr 4fr 1fr 1fr;
+    grid-column-gap: 10px;   
+}
+
+}
+
+
+/* tablet */
+
+
+@media (min-width: 481px) and (max-width: 1023px){
+
+   .tabletBody{
+
+       height: 630vh;
+   }
+
+
+
+    #gridsInicio{
+        display: grid;
+        grid-template-areas: 
+               "cabeza"
+               "barra"
+               "productos"
+               "promos"
+               "brazo"
+               "pie"
+       ;
+
+       grid-template-columns: 100%;
+       grid-template-rows: 2fr 1fr 4fr 4fr 1fr 1fr;
+     
+
+    }
+}
+
+
+
+ /* desktop */ 
+
+ @media (min-width: 1024){
+
+
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+ 
+                /*carta tuki CSS*/
+  .boxCarta{
+        font-size: 20px;
+        margin: 10px;
+        padding: 5px;
+    }      
+
+
+
+
+
+
+
+
+
+
+
+
+                /*promociones tuki CSS*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box
+}
+
+
+
+
+
+#gridsPromociones{
+    display: grid;
+    grid-template-areas: 
+          "principal"
+          "medio"
+          "ultimo"
+    ;
+
+    
+    grid-template-columns: 100%;
+    grid-template-rows: 4fr 6fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    
+}
+
+.body{
+    height: 251vh;
+}
+.primero{
+    width: 100%;
+    height: 100vh;
+}
+.flexPromos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxMedio{
+    margin: 7px;
+    padding: 7px;
+    
+}
+.flexMedio{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+
+
+
+/*media queris promociones*/
+
+/*smartphone*/
+
+@media (max-width: 501px){
+    .altoPromos{
+        height: 480vh;
+
+    }
+
+ #gridsPromociones{
+     display: grid;
+     grid-template-areas: 
+        "principal"
+        "medio"
+        "ultimo"
+        ;
+
+     grid-template-columns: 100%;
+     grid-template-rows: 4fr 6fr 1fr;   
+ }
+
+
+}
+
+
+/*tablet*/
+
+@media (min-width: 501px) and (max-width: 1022px){
+
+
+.altoTablet{
+    width: 100%;
+    height: 340vh;
+}
+
+  #gridsPromociones{
+      display: grid;
+      grid-template-areas: 
+         "primero"
+         "medio"
+         "ultimo"
+      ;
+
+      grid-template-columns: 100%;
+      grid-template-rows: 3fr 6fr 1fr;
+  } 
+
+}
+
+
+/*desktop*/
+
+@media (min-width: 1023){
+
+}
+
+
+
+
+
+/*areas de grid promociones*/
+
+#gridPrincipal{
+    grid-area: principal;
+}
+
+#gridMedio{
+    grid-area: medio;
+}
+
+#gridUltimo{
+    grid-area: ultimo;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 /*Fotos tuki CSS*/
+
+ *{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box
+}
+
+/*1 columna y 3 filas*/
+
+#gridFotos{    
+       display: grid;
+       grid-template-areas: 
+                  "sombrero"
+                  "fotos"
+                  "pie"
+       ;
+
+       grid-template-columns: 100%;
+       grid-template-rows: 4fr 10fr 1fr;
+}
+
+.boxH2{
+    margin-left: 10px;
+    padding:0px 10px 10px 10px;
+}
+.flexH2{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.boxFotos{
+    margin: 10px;
+    padding: 10px;
+}
+.flexFotos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+
+               
+               
+
+/*grid areas fotos*/
+
+#gridSombrero{
+       grid-area: sombrero;
+}
+
+
+#gridFotos{
+       grid-area: fotos;
+}
+
+
+#gridZapato{
+       grid-area: zapato;
+}
+
+
+
+            /*medias queris*/
+
+/*smartphone*/
+
+
+
+@media (max-width: 499px){
+
+
+.tamano{
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+#gridFotos{
+    display: grid;
+    grid-template-areas: 
+            "sombrero"
+            "foto"
+            "zapato"
+    ;
+
+
+    grid-template-columns: 100%;
+    grid-template-rows: 2fr 4fr 1fr;
+    grid-row-gap: 10px;
+
+   
+}
+
+}
+
+
+/*tablet*/
+
+@media (min-width: 500px) and (max-width: 1023px){
+
+       
+
+
+
+
+  #gridFotosCss{
+       display: grid;
+       grid-template-areas: 
+         "sombrero"
+         "foto"
+         "zapato"     
+       ;
+
+       grid-template-columns: 100%;
+       grid-template-rows: 2fr 4fr 1fr;
+  }  
+}
+
+
+/*desktop*/
+
+@media (min-width: 1023){
+
+}
+
+
+
+ 
+
+
+                 /* Nosotres tuki CSS*/
+
+#gridsNosotres{
+    display: grid;
+    grid-template-areas: 
+            "hat hat"
+            "shirt tattoo"
+            "shoes shoes"
+    ;
+
+
+    grid-template-columns: 50% auto;
+    grid-template-rows: 20vh 1fr 15vh;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+
+
+.bodyNosotres{
+    background-image: url(https://t2.rg.ltmcdn.com/es/posts/9/7/9/albondigas_de_carne_molida_45979_600.jpg);
+    background-position: bottom;
+    background-size: cover;
+    height: 150vh;
+}    
+
+.boxHat{
+    background-color: grey;
+    height: 15vh;
+    
+    }
+.flexHat{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+
+    }
+
+.flexSection{
+    display: flex;
+    flex-flow: column nowrap;
+   
+    }      
+.boxArt{
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}    
+
+
+
+
+
+/* areas grid nosotres*/
+
+#hat{
+    grid-area: hat;
+}
+
+#shirt{
+    grid-area: shirt;
+}
+
+#shoes{
+    grid-area: shoes;
+}
+
+#tattoo{
+    grid-area: tattoo;
+}
+
+
+
+
+/*media queris Nosotres*/
+
+/*smartphone*/
+
+@media (max-width: 500px){
+
+
+
+#gridsNosotres{
+    display: grid;
+    grid-template-areas: 
+            "hat"
+            "shirt"
+            "tattoo"
+            "shoes"  
+    ;
+
+    grid-template-columns: 100%;
+    grid-template-rows: 21vh 1fr 0 21vh;
+
+}
+
+}
+
+
+/*tablet*/
+
+@media (min-width: 501px) and (max-width: 1022px){
+
+
+
+#gridsNosotres{
+    display: grid;
+    grid-template-areas: 
+             "hat hat"
+             "shirt tattoo"
+             "shoes"    
+    ;
+
+
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 0 1fr;
+
+}
+}
+
+
+/*desktop*/
+
+@media (min-width: 1023px){
+
+}
+
+
+
